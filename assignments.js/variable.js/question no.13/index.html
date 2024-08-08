@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{background-color: rgb(70, 70, 70); color: antiquewhite; margin-left:2% ;}
+
+        #content.hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="message"></div>
+    <div id="content">
+   <h1>welcome...</h1>
+</div>
+    <script>
+      let age = prompt("Enter your age:")
+      const ageNumber = parseInt(age , 10);
+
+      const messageElement = document.getElementById('message');
+      const contentElement = document.getElementById('content');
+
+      if (isNaN(ageNumber)) {
+        contentElement.innerText = "Please enter a valid number for your age:";
+    } else{
+        if(ageNumber>=18){
+            messageElement.innerText = "You are old enough to drive:";
+        } else{
+            let waitfor = 18 - ageNumber;
+            messageElement.innerText = `you need to wait for ${waitfor} years to turn 18:`;
+            contentElement.classList.add('hidden');
+        }
+    }
+
+  
+    </script>
+</body>
+</html>

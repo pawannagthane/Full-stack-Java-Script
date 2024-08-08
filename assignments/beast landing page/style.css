@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+}
+nav{
+    color: aliceblue;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 3%;
+    margin-left:15%;
+}
+.headphone{
+    margin-top:-7%;
+    margin-left: 10%;
+}
+ul{
+    display: flex;
+    gap: 40px;
+    list-style-type:none;
+    margin-top: 1%;
+   
+    
+}
+.shop{
+    padding:15px 45px;
+    background-color: rgb(29, 28, 28);
+    color: aliceblue;
+    border: none;
+    margin-top: -3%;
+    border-radius: 10px;
+    
+}
+.home{
+    display: flex;
+    justify-content:space-evenly;
+    gap:6%;
+    margin-left:6%;
+    
+}
+.block1{
+    margin-left:16%;
+    margin-top: 5%;
+}
+.ear{
+    margin-left: 5%;
+}
+.heading{
+    font-size: 4em;
+    margin-top: 4%;
+}
+.overview{
+    margin-top:4%;
+}
+.para1{
+    margin-top: 2%;
+    width:60%;
+}
+.bag1{
+    padding: 2% 7%;
+    color: aliceblue;
+    background-color: rgb(22, 22, 22);
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.bag{
+    position: absolute;
+    margin-top:3.3%;
+    margin-left:3%;
+}
+.n399k{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.logoo{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 7% 0;
+}
+section{
+    text-align:start;
+}
+.specs{
+    text-align: center;
+    margin: 5% 0;
+}
+.bluetooth{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+}
+.specs{
+    margin-top: -1%;
+}
+h5{
+    font-size: x-small;
+    font-weight: 100;
+}
+h6{
+    font-size:xx-small;
+    font-weight: 100;
+}
+.bluetoothh{
+    margin-left: 15%;
+    margin-bottom: 10%;
+}
+.battery{
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+.charger{
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+.mic{
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+.case{
+    text-align: center;
+    margin:7% 0 4%  0;
+}
+.caseimage{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    align-items: center;
+    gap:5%;
+    margin-left: 30%;
+    
+}
+.pp{
+    width: 25%;
+    font-size:small;
+    font-weight: 100;
+    line-height:2em;
+}
+.more{
+    margin-top: 5%;
+    padding: 2% 5% 2% 2%;
+    background-color:  rgb(29, 28, 28);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    font-size:1em;
+    
+}
+button:hover{
+    color: rgb(255, 243, 243);
+    background:linear-gradient( #ffffff , #000000);
+    cursor: pointer;
+}
+.more::before{
+    content: '❕';
+    border: 2px solid rgb(97, 95, 95);
+    border-radius: 50%;
+    padding:2% 0;
+}
+.buynow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #16191b;
+    padding: 5%;
+    margin: 5% 8%;
+    border-radius:30px ;
+
+}
+
+
+.music{
+    font-size: x-large;
+    width: 65%;
+    color: #dbdbdb;
+}
+.upto{
+    margin-top: 5%;
+    font-size: medium;
+    color: #a8a8a8;
+}
+.buy{
+    margin-top: 5%;
+    padding: 2% 7%;
+    background-color:  rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: 300;
+    font-size:1em;
+}
+.buy::before{
+    content: '👜';
+    font-size: 1.5em;
+}
+.product{
+    text-align: center;
+}
+.headphones{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 25%;
+    margin:5% 30%;
+}
+.black{
+   
+    border-radius: 10px;
+    background-color: #16191b;
+}
+.blackpng{
+    
+    margin-top: -20%;
+}
+.n299k{
+    text-align: left;
+    margin-left: 10%;
+}
+.shoppingbag{
+    position: absolute;
+   margin-left:10%;
+   margin-top: -2.2%;
+   background-color: #000000;
+   padding: 5px;
+   border-radius:6px ;
+}
+.redblack{
+    margin: 4% 0;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim Example</title>
+    <style>
+        body{background-color: rgb(70, 70, 70); color: antiquewhite;margin-left: 20%;}
+        button{background-color:rgb(70, 70, 70); color: rgb(255, 255, 255); }
+    </style>
+</head>
+<body>
+    <h1>Trim Whitespace Example</h1>
+    <p>Original string:<span id="originalString"></span></p>
+    <p>Trimmed string: <span id="trimmedString"></span></p>
+    <button onclick="trimString()">Trim Whitespace</button>
+
+    <script>
+            function trimString() {
+    let stringWithWhitespace = '   Hello, World!   ';
+    
+    document.getElementById('originalString').innerText = '"' + stringWithWhitespace + '"';
+
+    let trimmedString = stringWithWhitespace.trim();
+
+    document.getElementById('trimmedString').innerText = '"' + trimmedString + '"';
+}
+    </script>
+</body>
+</html>
+

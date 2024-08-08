@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color: rgb(75, 75, 75);
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(134, 134, 134);
+        }
+        button , p,pre{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <pre>ages = [19 , 22, 19, 24, 20, 25, 26, 24, 25, 24]</pre>
+    
+    <pre class="sort"></pre>
+    <pre class="minumum"></pre>
+    <pre class="maximum"></pre>
+    <p class="range"></p>
+    <p class="average"></p>
+    <p class="median"></p>
+    <p class="min_max_ave"></p>
+    <button onclick="sort()">sort</button>
+    <button onclick="minimum()">minimum</button>
+    <button onclick="maximum()">maximum</button>
+   </div>
+
+    
+
+    <script>
+
+         const ages = [19 , 22, 19, 24, 20, 25, 26, 24, 25, 24]
+          function sort(){
+            ages.sort();
+        document.querySelector(".sort").innerHTML = ages;
+
+
+        let n = ages.length;
+        let median;
+
+        if (n % 2 ===0) {
+            median = (ages[n/2-1] + ages[n/2])/2;
+        }else{
+            median = ages[Math.floor(n/2)];
+        }
+
+        document.querySelector(".median").innerHTML = `Median age is : ${median} years`;
+
+        // let add = ages.reduce((acc , age)=>acc+age,0);  try any method
+        let add = 0;
+        for (let i = 0; i < ages.length; i++) {
+            add += ages[i];
+            
+        }
+    
+        let average = Math.round(add/ages.length);
+
+         document.querySelector(".average").innerHTML = `Average age is : ${average} years`;
+
+           min = Math.min(...ages)
+           max = Math.max(...ages)
+            let min_ave = Math.abs(min-average)
+            let max_ave = Math.abs(max-average)
+           document.querySelector(".min_max_ave").innerHTML = `min - average is : ${min_ave} and max - average is : ${max_ave}`
+        }  
+
+        function minimum (){
+        let minumum = Math.min(...ages)
+        document.querySelector(".minumum").innerHTML = `minumum age is : ${minumum} years`;
+        }
+
+        function maximum (){
+        let maximum = Math.max(...ages)
+        document.querySelector(".maximum").innerHTML = `Maximum age is : ${maximum} years`;
+        }
+        let c  = Math.max(...ages) - Math.min(...ages);
+        document.querySelector(".range").innerHTML = `Range between ages is : ${c} years.`;
+
+        ages.sort();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+.container{
+  
+  
+   margin:0 5%;
+   margin: auto;
+}
+.navbar-container{
+   display: flex;
+   justify-content: space-between;
+   margin:2% 5%;
+}
+.logo{
+   width: 50%;
+}
+ul{
+   display: flex;
+   position: relative;
+   right:40%;
+   margin-top: 7px;
+   color: rgb(112, 91, 91);
+}
+li{
+   list-style-type: none;
+   margin:0 30px;
+}
+li:first-child{
+   color: black;
+   font-weight: 700;
+}
+.button-group{
+   position: relative;
+   left:-10%;
+   top: -60px;
+}
+.nav-button:hover{
+   background-color: aliceblue;
+  color: rgb(0, 34, 255);
+}
+.nav-button{
+  position: relative;
+  padding: 15px 30px;
+  left:120px;
+  top: 60px;
+  border-radius: 5px;
+  color: rgb(243, 238, 238);
+  background-color: rgb(84, 84, 247);
+}
+
+.banner-container{
+   position: relative;
+   display: flex;
+
+}
+h1{
+   margin-top: 15%;
+    margin-left: 70px;
+    font-size: 4em;
+    font-weight: 600;
+    font-family: Poppins;
+    color: rgb(48, 9, 87);
+}
+span{
+   color: rgb(87, 87, 249);
+}
+
+.description{
+   margin-left: 90px;
+   width: 71%;
+   font-family: Poppins;
+
+}
+div button{
+   border: none;
+
+}
+
+.illustration{
+   position: relative;
+   width:850px;
+   height: 650px;
+   left:-10px;
+   margin-top: -10px;
+} 

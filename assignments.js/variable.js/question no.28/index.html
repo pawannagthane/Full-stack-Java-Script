@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #494949;
+            color: rgb(0, 0, 0);
+
+        }
+        .container {
+            background-color: rgb(184, 184, 184);
+            padding: 20px;
+            border-radius: 8px;
+            /* text-align: center; */  /*  to center the result */
+        }
+        input, button {
+            padding: 10px;
+            margin: 0px;
+        }
+        .results{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="rows">Enter number of rows: </label>
+        <input type="number" id="rows">
+        <button onclick="printTrianglePattern()">Print Pattern</button>
+        <button onclick="printSquarePattern()">Square Pattern</button>
+        <button onclick="printPyramidPattern()">Pyramid Pattern</button>
+        <div class="results">
+            <pre id="patternResult"></pre>
+        <pre class="squareResult"></pre>
+        <pre class="pyramidResult"></pre>
+        </div>
+    </div>
+    
+    <script>
+        function printTrianglePattern() {
+            const rows = document.getElementById('rows').value;
+            let pattern = '';
+    
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % 2 ===0) {
+                     console.log(i);
+                    }
+                    pattern += '*';
+                }
+                pattern += '\n'; 
+            }
+    
+            document.getElementById('patternResult').textContent = `Trangle Pattern \n${pattern}`;
+        }
+
+        function printSquarePattern(){
+            const rows = document.getElementById('rows').value;
+            let pattern = '';
+
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= rows; j++) {
+                    pattern +=  '*';
+                }
+                pattern += '\n'; 
+            }
+            document.querySelector('.squareResult').textContent = `Square Pattern \n${pattern}`;
+        }
+
+        function printPyramidPattern() {
+            const rows = document.getElementById('rows').value;
+            let pattern = '';
+
+        for (let i = 1; i <= rows; i++) {
+            let spaces = ' '.repeat(rows - i);
+            let stars = '*'.repeat(2 * i - 1);
+            pattern += (spaces + stars);
+            pattern += '\n';
+            document.querySelector('.pyramidResult').textContent = `Pyramid Pattern \n${pattern}`;
+    }
+}
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q.1</title>
+    <style>
+      body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: large;
+        font-weight: 600;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+      }
+    </style>
+</head>
+<body>
+   <div>
+    <h1> Value with their data type :</h1>
+        <p class="stringVal"></p>
+        <p class="numberVal"></p>
+        <p class="Boolean"></p>
+        <p class="null"></p>
+        <p class="undefined"></p>
+   </div>
+   <script>
+          let stringVal = "Hello, World!";
+        let numberVal = 10;
+        let booleanVal = true ;
+        let nullVal = null ;
+        let undefinedVal;
+
+       let div = document.createElement("div")
+        
+         
+        function DisplayVariables(){
+            
+          document.querySelector(".stringVal").textContent  = `value:${stringVal}, Type:${typeof stringVal}`;
+          document.querySelector(".numberVal").textContent  = `value:${numberVal}, Type:${typeof numberVal}`;
+          document.querySelector(".Boolean").textContent  = `value:${booleanVal}, Type:${typeof booleanVal}`;
+          document.querySelector(".null").textContent  = `value:${nullVal}, Type:${typeof nullVal}`;
+          document.querySelector(".undefined").textContent  = `value:${undefinedVal}, Type:${typeof undefinedVal}`;
+            
+        }
+        DisplayVariables(); 
+   </script>
+</body>
+</html>

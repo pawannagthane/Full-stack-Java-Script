@@ -1,0 +1,324 @@
+* {
+    margin:0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    max-width: 1440px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+    position: relative;
+    background-image: url(photos/futuristic-bg.png) ;
+    
+    
+    
+}
+.section1{
+    
+    background-color:rgba(0,0,0,0.6);
+    padding:3% 0 9% 0;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding-top:1%;
+    padding: 1% 5% 0 5%;
+}
+
+ul{
+    display: flex;
+    color: aliceblue;
+    list-style-type: none;
+    gap: 50px;
+    margin-top: 1%;
+    margin-right: 20%;
+    
+}
+li:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:1100px) {
+    ul{
+        color: blue;
+        display: none;
+    }
+    
+
+    
+}
+@media screen and (max-width:700px) {
+    .play{
+        margin-top:10%;
+    }
+    .line{
+        margin-top: 85px;
+    }
+   
+}
+@media screen and (min-width:700px) {
+    .play{
+        margin-top: 15%;
+    }
+    .line{
+        margin-top: 85px;
+    }
+    .winner{
+        font-size: xxx-large;
+        width: 62%;
+    }
+    .improve{
+        width: 60%;
+
+    }
+    
+    
+}
+button:hover{
+    cursor: pointer;
+}
+.button1{
+    display: flex;
+    gap: 20px;
+}
+.sign-in{
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    padding: 2% 10px;
+}
+.sign-up{
+    background-color: rgb(255, 84, 84);
+    padding: 7% 10%;
+    width: 100px;
+    border: none;
+}
+.hero{
+    display: flex;
+    padding: 5% 5%;
+}
+.head{
+    color: aliceblue;
+    margin-top: 100px;
+    
+    
+}
+.improve{
+    margin-top: 20px;
+    
+}
+.button2{
+    margin-top: 10px;
+}
+
+.started{
+    margin-top: 10px;
+    background-color: rgb(255, 84, 84);
+    padding: 15px 20px;
+    border:none;
+}
+.learn{
+    padding: 15px 20px;
+    border:1px solid wheat;
+    background-color: transparent;
+    color: aliceblue;
+}
+.play{
+    
+    color: aliceblue;
+}
+
+.xxiv{
+    font-size: x-large;
+    width: 65%;
+}
+.dash1{
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.dash{
+    margin-top: 7px;
+}
+
+
+.right{
+    position: absolute;
+    right:40px;
+}
+main{
+    padding: 10% 0;
+}
+.heading{
+    padding:0 20% 10% 20%;
+}
+.headingg{
+    font-size: xxx-large;
+    text-align: center;
+}
+.images{
+    display:flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    row-gap: 20px;
+    column-gap:5px;
+    z-index: -1;
+
+}
+
+.names{
+    position: relative;
+    color: aliceblue;
+    margin-top: -35%;
+    display: flex;
+    padding: 10px 5px;
+    backdrop-filter: blur(10px);
+}
+
+h5{
+    margin-top:5px;
+}
+.button3{
+    margin-top:20px;
+    padding: 7px 7px;
+    margin-left:10px;
+    color: aliceblue;
+    border: none;
+    background-color: rgb(255, 84, 84);
+}
+.header{
+    padding:0 2%;
+    display: grid;
+    justify-items: center;
+}
+.text1{
+    font-size:2em;
+    /* font-weight:900; */
+    margin-top: 20px;
+}
+.text2{
+    margin-top: 20px;   
+}
+
+@media screen and (min-width:1000px) {
+    .text1{
+        padding: 0 10% 5% 10%;
+        font-size:3em;
+        margin-top: 0;
+    }
+    .text2{
+        padding:0 10% 5% 10%;
+        margin-top:0;
+    }
+    .header{
+        /* display:flex; */
+        gap: 50px;
+    } 
+    .arrow1{
+        font-weight:bolder;
+      
+        
+        
+    }
+    .arrow{
+       padding: 0 5%;
+    }
+}
+.button4{
+   margin-left: 12%;
+   margin-top: 5%;
+   display: flex;
+   column-gap: 10px;
+}
+.button5{
+    background-color: rgb(255, 84, 84);
+    color: aliceblue;
+    padding:3% 4%;
+    border: none;
+}
+.button6{
+    padding:3% 4%;
+    background: transparent;
+    border:1px solid  rgb(255, 84, 84);
+}
+.text{
+    font-size:1em;
+    font-weight: 600;
+}
+
+
+.arrow{
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    /* display: flex; */
+    /* justify-content: space-between; */
+    
+    
+}
+
+.left{
+    background: #fffdfd;
+    border: 1px solid rgb(255, 84, 84) ;
+    background-color: rgb(252, 222, 222);
+    padding: 1px 15px;
+   
+}
+.left:hover{
+   cursor: pointer;
+}
+.right-arrow:hover{
+    cursor: pointer;
+}
+.right-arrow{
+    border: 1px solid rgb(255, 84, 84) ;
+    background-color:  rgb(255, 84, 84);
+    padding: 10px 15px;
+}
+button:hover{
+    color:  rgb(255, 84, 84);
+    background: #fffdfd;
+}
+.button7{
+    border: 1px solid rgb(255, 84, 84) ;
+    background-color:  rgb(255, 84, 84);
+    padding: 10px 15px;
+    color: #fffdfd;
+    margin-top: 15px;
+}
+.aboutt{
+    color:  rgb(255, 84, 84);
+    margin-top: 9px;
+}
+.hints{
+    /* position: absolute; */
+    margin-top:13%;
+   right: 0;
+    
+}
+.bgcg{
+    margin-top: 10%;
+    background-image: url(photos/Rectangle-606.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.hiddee{
+    background-color: rgba(0,0,0,0.6);
+    /* margin-top: 30%; */
+}
+.button8{
+    border: 1px solid rgb(255, 84, 84) ;
+    background-color:  rgb(255, 84, 84);
+    padding: 10px 15px;
+    color: #fffdfd;
+    margin-top: 15px;
+}
+
+ol li {
+    margin-top: 5px;
+    color: rgb(109, 109, 109);
+}
+ol li:first-child{
+    color: #fffdfd;
+    font-weight: 600;
+}

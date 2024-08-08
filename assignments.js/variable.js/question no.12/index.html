@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: rgb(70, 70, 70); color: antiquewhite;margin-left: 20%;}
+        button{background-color:rgb(70, 70, 70); color: rgb(255, 255, 255); }
+        pre{font-size: larger;}
+    </style>
+</head>
+<body >
+    <h1> Human readable time format </h1>
+    <button onclick="formatDate()">Date & Time format</button>
+    <pre id="format"></pre>
+
+    <script>
+       function formatDate(){
+        let now = new Date();
+
+        let date = String(now.getDate()).padStart(2,'0');
+        let month = String(now.getMonth()+1).padStart(2,"0");
+        let year = now.getFullYear();
+        let hours = String(now.getHours()).padStart(2,"0")
+        let minutes = String(now.getMinutes()).padStart(2,'0')
+        
+        let yymmdd = `${year}-${month}-${date} ${hours}:${minutes}   YYYY-MM-DD HH:mm`
+        let ddmmyy = `${date}-${month}-${year} ${hours}:${minutes}   DD-MM-YYYY HH:mm`
+        let ddmmyyslash = `${date}/${month}/${year} ${hours}:${minutes}   DD/MM/YYYY HH:mm`
+       
+         document.getElementById("format").innerText = `${yymmdd}\n${ddmmyy}\n${ddmmyyslash}`;
+       }
+    
+        </script>
+</body>
+</html>

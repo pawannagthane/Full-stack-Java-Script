@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>['Milk', 'Coffee', 'Tea', 'Honey']</p>
+        <pre class="Meat"></pre>
+        
+        <p>Meat added in the beginning</p>
+        <p>Sugar added at the end</p>
+        <p>Honey removed</p>
+        <p>Tea modified to Green tea</p>
+        
+    </div>
+
+    <script>
+        let meat = document.querySelector(".Meat")
+        const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+        shoppingCart.unshift("Meat");
+        shoppingCart.pop();
+        shoppingCart.push("Sugar");
+        shoppingCart.splice(3,1,"Green tea" )
+        meat.innerText = shoppingCart;
+
+
+
+
+    </script>
+</body>
+</html>

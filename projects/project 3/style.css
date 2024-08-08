@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orbitron;
+}
+body{
+    max-width: 1440px;
+    margin: auto;
+    overflow: hidden;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+   margin: 5%;
+}
+nav div img{
+    width: 50%;
+}
+nav div ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    margin: 0 30px;
+}
+li:first-child{
+    text-decoration: underline 2px;
+    font-weight: 600;
+}
+.button-group{
+    display: flex;
+}
+.nav-button{
+    margin: 0 0 0 10px;
+    padding: 5px 24px;
+    border-radius: 7px;
+    
+}
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       height: 50%;
+       
+        margin: 0 5%;
+}
+.square{
+    position: relative;
+    display: flex;
+    width:0;
+    height: 300px;
+    top: 130px;
+    left: 11.7%;
+    
+
+}
+.hero-png {
+    position: relative;
+     width: 400px;
+     top: -10px;
+
+     
+}
+.star{
+    position: relative;
+    top: -210px;
+    width: 0;
+     left:92%;
+     
+}
+.star1{
+    position: relative;
+    display: flex;
+    top: 240px;
+    width: 0;
+    height: 50px;
+    left:40%;
+    top: 210px;
+}
+
+
+.globe{
+    position: relative;
+    display: flex;
+    width: 0;
+    height: 50px;
+    top: -270px;
+    left: 55%;
+    
+
+}
+.hero-container-right{
+   align-items: center;
+   justify-content: center;
+
+}
+.hero-heading{
+    position: relative;
+    font-size: 3.6em;
+    left: 50px;
+    top: -50px;
+
+}
+.hero-description{
+    position: relative;
+    top:20px;
+    width:90%;
+    left: 80px;
+}
+.button-email{
+    position: relative;
+    top: 100px;
+    left: 280px;
+    padding: 3px 15px;
+    border-radius: 7px;
+
+}
+.button-join{
+    position: relative;
+    top: 100px;
+    left: 285px;
+    padding: 3px 8px;
+    border-radius: 7px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.hello{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 20px;
+    
+}
+.contact-heading{
+    position: relative;
+    left: 41%;
+    top: 160px;
+}
+.icons{
+    position: relative;
+    display: flex;
+    left: 35%;
+    top: 170px;
+    width: 210px;
+    justify-content: space-between;
+    
+}

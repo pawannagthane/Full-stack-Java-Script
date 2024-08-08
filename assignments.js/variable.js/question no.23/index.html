@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+               font-family: Arial, sans-serif;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 100vh;
+               margin: 0;
+               background-color: #494949;
+           }
+           .container {
+               background-color: rgb(184, 184, 184);
+               padding: 20px;
+               border-radius: 8px;
+               text-align: center;
+           }
+           input, button {
+               padding: 10px;
+               margin: 0px;
+           }
+       </style>
+</head>
+<body>
+<div class="container">
+    <label for="number">number : </label>
+    <input type="number" class="inputbox" placeholder="Enter number">
+    <button onclick="prime()">check</button>
+    <p class="result"></p>
+</div>
+    <script>
+        function prime(){
+
+            function prime(num){
+
+                if (num <= 1) return false;
+
+                if(num  === 2 || num === 3)
+                return true;
+    
+                if(num % 2 === 0  || num % 3 === 0)
+                return false;
+
+                for (let i = 5 ; i * i <= num; i += 6){
+                    if (num % i === 0 || num % (i + 2) === 0) return false;
+                }
+                return true;
+                
+            }
+
+            let input = document.querySelector(".inputbox").value;
+            let result = document.querySelector(".result");
+
+            let inputvalue = parseInt(input , 10);
+
+            if (isNaN(inputvalue)) {
+                result.textContent = "Enter a valid number.";
+            }else{
+
+            if (prime(inputvalue)) {
+                result.textContent = `${inputvalue} is a prime number.`;
+            }
+            else{
+                result.innerText = `${inputvalue} is not a prime  number.`
+            }
+        }
+        }
+
+       
+           
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q.3 , Q.4 </title>
+    <style>
+        body{background-color: rgb(70, 70, 70); color: antiquewhite;margin-left: 5%;}
+        button{background-color:rgb(70, 70, 70); color: rgb(255, 255, 255); padding: 5px 10px;}
+        p{font-size: larger;}
+        pre{font-size: larger;}
+        input{background-color: rgb(202, 202, 202); padding: 5px 10px;}
+    </style>
+</head>
+<body>
+
+    <h2>toUpperCase( )  Method</h2>
+    <p>write something and hit button to Upper Case </p>
+    <input type="text" placeholder="" id="inputuppercase">
+    <p class="Q-three"></p>
+    <button onclick="questionthree()" >toUpperCase</button>
+    
+
+    <h2>includes( ) Method</h2>
+    <p>if the city you entered in is present in array the output will be true if not it will  be false</p>
+    <pre>["India" , "Newseland" , "Pakistan" ,"Thailand" ,"Bangkok" , "Netherland"]</pre>
+    <input type="text" id="inputincludes" placeholder="Enter City Name to check" name="text">
+     <p class="Q-four"></p>
+    <button onclick="questionfour()" >includes</button>
+
+    <h2>split( ) Method</h2>
+    <p>Enter Something to check the output</p>
+    <input type="text" id="inputsplit" placeholder="Enter Something">
+    <p class="Q-five"></p>
+    <button onclick="questionfive()">split</button>
+    
+
+    <h2>split( ) Method</h2>
+    <pre>'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'</pre>
+    <p class="Q-six"></p>
+    <p class="onclick"></p>
+    <button onclick="questionsix()">split</button>
+    
+
+    <h2>indexOf & last indexOf ( ) Method</h2>
+    <pre>["PW Skills" , "JavaScript" , "HTML" , 'CSS', "PW Skills" , "React", "Node.js", "PW Skills"] </pre>
+    <input type="text" name="" class="inputindex" placeholder="Enter Course">
+    <p class="firstOccurrence"></p>
+    <p class="lastOccurrence"></p>
+    <button onclick="firstOccurrence()">check</button>
+    
+
+    <script>
+
+        //this code is for Q.3
+
+    function questionthree(){
+        let inputbox = document.getElementById("inputuppercase")
+        let array2 = inputbox.value;
+        let result = array2.toUpperCase();
+
+        document.querySelector(".Q-three").textContent = result; 
+
+    }  
+
+        // this code is for Q.4
+
+    function questionfour(){
+        let inputbox = document.getElementById("inputincludes")
+        let Var = ["India" , "Newseland" , "Pakistan" ,"Thailand" ,"Bangkok" , "Netherland"]
+        if (!inputbox.value) {
+            alert("Enter Country Name:")
+        }
+        let result = Var.includes(inputbox.value)
+        console.log(result);
+
+        document.querySelector(".Q-four").textContent = result;
+
+    }
+
+        // this code is for Q.5
+
+    function questionfive(){
+        let inputbox = document.getElementById("inputsplit")
+        if (!inputbox.value) {
+            alert("Enter Something:")
+        }
+        let five = inputbox.value;
+        let Five = five.split('')
+        console.log(Five);
+
+        document.querySelector(".Q-five").textContent = Five;
+
+    }
+
+        // this code is for Q.6
+
+    function questionsix(){
+        let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+        
+        let array = companies.split(',')
+        console.log(array);
+
+        document.querySelector(".Q-six").textContent = array;
+        document.querySelector(".onclick").textContent = "check console for better result !";
+
+    }
+
+        // this code is for Q.7
+    
+    function firstOccurrence(){ 
+        let wordsArray = ['pw skills', 'JavaScript', 'HTML', 'CSS', 'pw skills', 'React', 'Node.js', 'pw skills'];
+
+        let inputbox = document.querySelector(".inputindex")
+        if (!inputbox.value) {
+            alert("Enter Course:")
+        }
+
+        let firstOccurrence = wordsArray.indexOf(inputbox.value);
+        let lastOccurrence = wordsArray.lastIndexOf(inputbox.value);
+
+        document.querySelector(".firstOccurrence").textContent ='First index Of :' + firstOccurrence;
+        document.querySelector(".lastOccurrence").textContent ='Last Index Of :' + lastOccurrence;
+    }
+    </script>
+</body>
+</html>

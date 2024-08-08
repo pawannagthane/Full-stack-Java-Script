@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color: rgb(75, 75, 75);
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(134, 134, 134);
+        }
+        button , p{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="createEvenOddArrays()">Generate Arrays</button>
+        <p id="evenResult"></p>
+        <p id="oddResult"></p>
+    </div>
+
+    <script>
+        function createEvenOddArrays(){
+            let evenNumber = document.getElementById('evenResult') 
+            let oddNumber = document.getElementById('oddResult')
+
+            let even = [];
+            let odd = [];
+
+          for (let i = 0; i <= 100; i++) {
+            if (i % 2 === 0) {
+                even.push(i);
+            }else{
+                odd.push(i);
+            }
+          }
+           evenNumber.innerHTML = `Even numbers from 0-100 are :${even.join(' , ')}`;
+           oddNumber.innerHTML = `Odd numbers from 0-100 are :${odd.join(' , ')}`;
+        }
+    </script>
+</body>
+</html>

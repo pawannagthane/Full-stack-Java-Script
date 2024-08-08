@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: rgb(65, 65, 65);
+            font-family: Arial, sans-serif;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px ;
+            background-color: rgb(196, 196, 196);
+        }
+        input , button{
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="months">year:</label>
+        <input type="number" placeholder="enter year" id="year">
+        <label for="months">month:</label>
+        <input type="number" placeholder="enter month" id="month">
+        <button onclick="calculateDays()">calculate</button>
+        <p class="result"></p>
+    </div>
+
+    <script>
+        function calculateDays() {
+
+            const year = parseInt(document.getElementById("year").value);
+            const month = parseInt(document.getElementById("month").value);
+            const days = daysInMonth(year, month);
+
+        function daysInMonth(year,month) {
+            // Check if the year is a leap year
+            function isLeapYear(year) {
+                return (year % 4 === 0);
+            }
+
+            // Number of days in each month
+            const monthDays = {
+                1: 31,
+                2: isLeapYear(year) ? 29 : 28,
+                3: 31,
+                4: 30,
+                5: 31,
+                6: 30,
+                7: 31,
+                8: 31,
+                9: 30,
+                10: 31,
+                11: 30,
+                12: 31
+            };
+
+           
+            return monthDays[month] ||  "Invalid month";
+        }
+        document.querySelector(".result").textContent = `The number of days in month ${month} of year ${year} is: ${days}`;
+    }
+       
+    </script>
+</body>
+</html>

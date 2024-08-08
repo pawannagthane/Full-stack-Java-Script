@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: rgb(70, 70, 70); color: antiquewhite;margin-left: 20%;}
+        button{background-color:rgb(70, 70, 70); color: rgb(255, 255, 255); }
+    </style>
+</head>
+<body>
+    <h1>Truthy and Falsy Values in JavaScript</h1>
+    
+    <button onclick="showTruthyValues()">Show Truthy Values</button>
+    <button onclick="showFalsyValues()">Show Falsy Values</button>
+    
+    <h2>Truthy Values</h2>
+    <ul id="truthyValues"></ul>
+    
+    <h2>Falsy Values</h2>
+    <ul id="falsyValues"></ul>
+
+    <script>
+    function showTruthyValues() {
+    const truthyValues = [
+        { value: 1, description: 'Non-zero number' },
+        { value: 'hello', description: 'Non-empty string' },
+        { value: {}, description: 'Object' }
+        
+    ];
+
+    const truthyList = document.getElementById('truthyValues');
+    truthyList.innerHTML = '';
+
+    truthyValues.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.description}: ${item.value} (Boolean: ${Boolean(item.value)})`;
+        truthyList.appendChild(listItem);
+    });
+}
+
+function showFalsyValues() {
+    const falsyValues = [
+        { value: 0, description: 'Zero' },
+        { value: '', description: 'Empty string' },
+        { value: null, description: 'null' },
+        { value: undefined, description: 'undefined' },
+    ];
+
+    const falsyList = document.getElementById('falsyValues');
+    falsyList.innerHTML = '';
+
+    falsyValues.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.description}: ${item.value} (Boolean: ${Boolean(item.value)})`;
+        falsyList.appendChild(listItem);
+    
+    });
+}
+
+    </script>
+</body>
+</html>

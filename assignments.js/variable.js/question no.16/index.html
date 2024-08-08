@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(65, 65, 65);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px ;
+            background-color: rgb(196, 196, 196);
+        }
+        input , button{
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="input">season:</label>
+        <input type="text" name="text" placeholder="Season" id="inputbox">
+        <button type="submit" onclick="EventSeason()">Check</button>
+        <div class="result"></div>
+    </div>
+
+    <script>
+        function EventSeason(){
+            let inputbox = document.getElementById("inputbox").value.trim().toLowerCase(); //.trim(); trims the white space 
+            let result = document.querySelector(".result")                  // .toLowerCase(); make the input to lowercase
+
+            let season;
+            if (inputbox ==="september" || inputbox === "october" || inputbox === "november" ) {
+                season = "Autumn";
+            } else if(inputbox ==="december" || inputbox === "january" || inputbox === "february" ) { 
+                season = "Winter";
+            } else if(inputbox ==="march" || inputbox === "april" || inputbox === "may" ) {  
+                season = "Spring";
+            }  else if(inputbox ==="june" || inputbox === "july" || inputbox === "august" ) { 
+                season = "Summer";
+            } else{
+                result.innerText = "Please Enter valid Month";
+            }
+            result.innerText = `The season is ${season}.`;
+        }
+    </script>
+</body>
+</html>

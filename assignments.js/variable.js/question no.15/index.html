@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #494949;
+        }
+        .container {
+            background-color: rgb(184, 184, 184);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <label for="score">score:</label>
+    <input type="text" id="inputbox" placeholder="Enter Score">
+    <button onclick="Score()">Get Grades</button>
+    <div class="result"></div>
+   </div>
+
+    <script>
+        function Score(){
+            let number = document.getElementById("inputbox").value;
+            let result = document.querySelector(".result")
+
+            let numbervalue = parseInt(number , 10)
+
+            if (isNaN(numbervalue)|| numbervalue>100 || numbervalue<0) {
+                result.innerText = "Please enter a valid score between 0 and 100.";
+                return;
+            } 
+                let Grade;
+                if (numbervalue >= 80 && numbervalue <= 100) {
+                    Grade = "A";
+                }else if (numbervalue >= 70 && numbervalue <= 79) {
+                    Grade = "B";
+                }else if (numbervalue >= 60 && numbervalue <= 69) {
+                    Grade = "C";
+                }else if (numbervalue >= 50 && numbervalue <= 59) {
+                    Grade = "D";
+                }else if (numbervalue >= 0 && numbervalue <= 49) {
+                    Grade = "F";
+                }
+                result.innerText =`your Grade is ${Grade}.`
+            
+        }
+    </script>
+</body>
+</html>

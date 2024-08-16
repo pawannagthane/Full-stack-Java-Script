@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> selectors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"  rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="container">
+  
+  <div class="navbar">
+    <img src="0L3A3404-02.jpeg" alt="image">
+    <nav>
+      
+        <li  class="name">pawan nagthane blogs</li>
+        <li class="first">this is my second blog</li>
+    </nav>
+  </div>
+  
+  <aside>
+    <span class="heading">basic selectors list</span>
+   <ul >
+    <li class="line">universal selector</li>
+    <li class="line">element selector</li>
+    <li class="line">class selector</li>
+    <li class="line">id selector</li>
+    <li class="line">attribute selector</li>
+    <li tabindex="0" data-descr=":hover ::before ::after" class="line">pseudo selector</li>
+    <li class="line">:hover</li>
+    <li class="line">::before</li>
+    <li class="line">::after</li>
+   </ul>
+  </aside>
+  <article>
+    <h1>what is a selector?</h1>
+    <p >selectors are a part of CSS rules.</p>
+    <p>it selects the HTML terms and helps in aplying values to them. </p>
+    <header>basic selectors:</header>
+    <h2>universal selector</h2>
+    <a tabindex="0" data-descr="want to know more about it?" class="open" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">click to read more</a>
+    <p>universal selector is a special type selector which can add values to all the elements present in body.</p>
+    <h3>example</h3>
+    <div class="example">
+      <code>
+        <span>
+          <span class="selector">* <span class="punctuation"> {</span>  </span><br>
+            <span class="value"> color: <span class="property">green</span>;</span> <br>
+             <span class="punctuation">}</span>
+        </span>
+      </code>
+      </div>
+      <h3>result</h3>
+      
+        <nav>
+          <div class="result">
+        <p class="*">are you enjoying it!</p>
+      </div>
+    </nav>
+    <h2>element selector</h2>
+    <a tabindex="0" data-descr="want to know more about it?" class="open" href="https://www.w3schools.com/cssref/sel_Element.php">click to read more</a>
+    <p>CSS Element Selector is also known as a Type selector. Element Selector in CSS tries to match the HTML elements having the same name. Therefore, a selector of < ul> matches all the < ul> elements selects all the unordered lists in that HTML page.</p>
+    <h3>example</h3>
+    <div class="example">
+        <code>
+          <span class="selector">p <span class="punctuation"> {</span></span>  <br>
+            <span class="value">border: <span class="property">solid 1px #ccc</span>;</span>  <br>
+            <span class="punctuation">}</span>
+          </div>
+        </code>
+        <h3>result</h3>
+      <div class="result">
+        <nav>
+        <p>are you enjoying it!</p>
+        </nav>
+      </div>
+        <h2>class and id selector</h2>
+        <a tabindex="0" data-descr="want to know more about it?" class="open" href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">click to read more</a>
+        <h2>class selector</h2>
+        <p> The class selector selects HTML elements with a specific class attribute.</p> 
+        <p> To select elements with a specific class, write a period (.) character, followed by the class name.</p>  
+        <h3>example</h3>
+        <code>
+          <div class="example">
+            <span class="selector" >.center <span class="punctuation"> {</span></span> <br>
+              <span class="value">text-align:<span class="property">center</span> ;</span> <br>
+              <span class="value">color:<span class="property">red</span> ;</span> <br>
+           <span class="punctuation"> }</span>
+          </div>
+        </code>
+        <h3>result</h3>
+      <div class="result">
+        <p class="center">are you enjoying it!</p>
+      </div>
+        <h2>id selector</h2>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+
+        <p> The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+            
+        <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+        <h3>example</h3>
+        <code >
+        <div class="example">
+          
+        <span class="selector">#commando<span class="punctuation"> {</span> </span> <br>
+           <span class="value"> text-align:<span class="property">center</span> ;</span> <br>
+           <span class="value"> color:<span class="property">yelow</span> ;</span> <br>
+          <span class="punctuation">}</span>
+         
+        </div>
+      </code>
+      <h3>result</h3>
+      <div class="result">
+        <p id="commando1">are you enjoying it!</p>
+      </div>
+          <p class="warning">an id name cannot start  with number.</p>
+          <h2>attribute selector</h2>
+          <a tabindex="0" data-descr="want to know more about it?" class="open" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">click to read more</a>
+          <p>The [attribute] selector is used to select elements with a specified attribute.</p>
+          <p>The [attribute="value"] selector is used to select elements with a specified attribute and value.</p>
+          
+           <h3 >example</h3>
+           <code>
+            <div class="example">
+              <span class="selector">a[target]<span class="punctuation"> {</span></span> <br>              
+              <span class="value"> background-color: <span class="property">green</span>;</span> <br>
+             <span class="punctuation">}</span>
+           </code>
+        </div> 
+        <h3>result</h3>
+      <div class="result">
+        <a href="https://www.youtube.com/" target="_blank">click here</a>
+      </div>
+          <p>The attribute selectors can be useful for styling forms without class or ID:</p>
+          <code>
+            <div class="example">          
+          <span class="selector">input[type="text"]<span class="punctuation"> {</span></span> <br>
+             <span class="value"> width:<span class="property">150px</span>;</span> <br>
+            <span class="value"> display: <span class="property">block</span>;</span> <br>
+             <span class="value">margin-bottom: <span class="property">10px</span>;</span> <br>
+             <span class="value">background-color: <span class="property">yellow</span>;</span> <br>
+              <span class="punctuation">}</span> <br>
+          <span class="selector">input[type="button"]</span><span class="punctuation"> {</span><br>
+            <span class="value">width:<span class="property"> 120px</span>;</span><br>
+           <span class="value"> margin-left: <span class="property">15px</span>;</span><br>
+            <span class="value">display:<span class="property">block<span>;</span> <br>
+          <span class="punctuation">}</span>          
+        </div>
+      </code>
+      <h3>result</h3>
+      <div class="result">
+        <form action="login form">
+         firstname:<input type="text">
+         lastname: <input type="text">
+         <input class="login" type="button" value="login">
+        </form>
+      </div>
+      <header>pseudo selectors:</header>
+      <a tabindex="0" data-descr="want to know more about it?" class="open" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">click to read more</a>
+      <h2>:hover</h2>
+      <p>:hover is selector which is used to style the button and other elements.the element (or)a button changes it property when a pointer is placed on it.</p>
+      <h3>example</h3>
+      <div class="example">
+        <code>
+          <span class="selector"> button:hover <span class="punctuation">{</span></span><br>
+            <span class="value">background-color:<span class="property">blue</span>;</span><br>
+            <span class="value">color: <span class="property">white</span>;</span><br>
+            <span class="punctuation">}</span>
+        </code>
+      </div>
+      <h3>result</h3>
+      <div class="result">
+        <button class="hover">login</button>
+      </div>
+        <h2>::before</h2>
+        <p>pseudo class ::before is used to add contents before the element.</p>
+        <p>is is applied with the content property.</p>
+        <p>is is inline by default.</p>
+      <h3>example</h3>
+      <div class="example"> 
+        <code>
+          <span class="selector">p::before  <span class="punctuation">{</span></span><br>
+            <span class="value">content<span>:<span class="property">"<<"</span></span>;</span> <br>
+            <span class="value">color: <span  class="property">red</span>;</span><br>
+           <span class="punctuation">}</span></span>          
+        </code>
+      </div>
+      <h3>result</h3>
+      <div class="result"> 
+       <p class="before">are you enjoying it!</p>
+      </div>
+      <h2>::after</h2>
+      <p>pseudo class ::after is used to add contents after the element.</p>
+        <p>is is applied with the content property.</p>
+        <p>is is inline by default.</p>
+        <h3>example</h3>
+      <div class="example"> 
+        <code>
+          <span class="selector">p::after  <span class="punctuation">{</span></span><br>
+            <span class="value">content<span>:<span class="property">">>"</span></span>;</span> <br>
+            <span class="value">color: <span  class="property">green</span>;</span><br>
+           <span class="punctuation">}</span></span>          
+        </code>
+      </div>
+      <h3>result</h3>
+      <div class="result"> 
+       <p class="after"> are you enjoying it!</p>
+      </div>
+      </article>
+     
+</body>
+</html>

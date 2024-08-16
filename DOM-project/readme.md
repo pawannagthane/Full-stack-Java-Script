@@ -5,7 +5,6 @@
 
 
 ![output](<DOM-project/project - 01, 02,03/firstAssignmentImage/task1Output.png>)
-
 ---
 
 ## project 4

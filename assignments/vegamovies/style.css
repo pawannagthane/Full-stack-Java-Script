@@ -1,0 +1,186 @@
+
+body{
+    background-color: black;
+    color: aliceblue;
+    margin: 5px 100px;
+}
+.logo{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+nav{
+    background-color: rgb(110, 109, 109);
+    color: black;
+}
+.nav-bar{
+    gap: 20px;
+}
+ 
+@media screen and (min-width:1100px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu{
+        display: none;       
+    }
+    input:hover{
+        padding: 20px 50px;
+    }
+}
+@media screen and (max-width:1100px) {
+        input{
+            width:90%;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        nav{
+            background-color: transparent;
+        }
+        .nav-bar{
+            display: none;
+        }
+        
+}
+@media screen and (max-width:600px) {
+    body{
+        margin: 5px;
+    }
+}
+ul{
+    display: flex; list-style: none;  justify-items: center;
+}
+
+input{
+    
+    padding: 20px;
+    background-color:white;
+    border: none; 
+    transition: 1s;
+
+}
+.menu{
+    color: aliceblue;
+}
+
+
+section{
+    align-items: center;
+     justify-content: center;
+     position: relative;
+}
+section ul{
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10 20px 10;
+    
+}
+section ul li{
+    z-index: -1;
+}
+
+
+.sect:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.channel li{
+    background-color: rgb(210, 30, 99);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.channel li:hover{
+    background-color:rgb(175, 25, 83) ;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+main{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .card{
+    width: 200px;
+    height: 500px;
+}
+main div img{
+    width: 200px;
+    height: 300px;
+    border:white 4px solid;
+}
+.date{
+    text-align: center;
+    color: rgb(107, 107, 107);
+}
+ .data{
+    color: rgb(214, 214, 214);
+ }
+ .data:hover{
+    color: brown;
+ }
+ footer ul{
+    display:flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+ }
+  footer ul a{
+    background-color: aliceblue;
+    color: black;
+    text-decoration: none;
+    padding:10px 20px;
+ }
+ footer ul a:hover{
+    color: aliceblue;
+    background-color: black;
+ }
+ a{
+    color: aliceblue;
+    text-decoration: none;
+ }
+
+
+
+ /* nav bar hover */
+
+ .web ul{
+    display: none;
+ }
+ .web ul li{
+    margin: 15px;
+    z-index:1;
+ }
+.web ul:hover {
+    display: block;
+}
+ .web:hover ul{
+    display: block;
+    position: absolute;
+    margin: 14px;
+    background-color: rgba(0, 0, 0, 0.767);
+    padding:10px 0;
+    text-align: start;
+    font-size: large;
+    color: aliceblue;
+    cursor: pointer;
+    
+ }
+
+
+  
+  .active {
+    font-weight: bold;
+    color: rgb(255, 255, 255);  
+    background-color: rgb(201, 21, 21);
+}

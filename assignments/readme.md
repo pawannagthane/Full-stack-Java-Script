@@ -22,7 +22,7 @@
  
  
  ## vegamovies clone
-[label](<assignments/vegamovies>)
+[label](<vegamovies>)
  
  
 
